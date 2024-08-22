@@ -1,0 +1,43 @@
+/* Common */
+.button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Button Type */
+
+.button.primary {
+    background: blue;
+}
+
+.button.primary:hover {
+    background: darkblue;
+}
+
+.button.secondary {
+    background: gray;
+}
+
+.button.secondary:hover {
+    background: lightgray;
+}
+
+/* Button size */
+
+.small {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.large {
+    padding: 15px 30px;
+    font-size: 16px;
+}
