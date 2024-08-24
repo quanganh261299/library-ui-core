@@ -1,0 +1,13 @@
+:root {
+    --nav-color: #f33f62;
+}
+
+.header {
+}
+
+.nav {
+    height: 58px;
+    background-color: var(--nav-color);
+    padding-left: 160px;
+    padding-right: 160px;
+}

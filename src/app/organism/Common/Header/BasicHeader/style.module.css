@@ -1,0 +1,47 @@
+:root {
+    --primary: #f33f62;
+    --light-gray: #737e95;
+}
+
+.container {
+    max-width: calc(100% - 320px);
+    margin: 0 auto;
+}
+
+.intro {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--light-gray);
+    border-bottom: solid 1px #ebebeb;
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+.intro__icon-list {
+    display: flex;
+    gap: 15px;
+}
+
+.intro__icon-list__icon:hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.information {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    width: 100%;
+}
+
+.information__logo {
+}
+
+.information__detail {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-left: 60px;
+}

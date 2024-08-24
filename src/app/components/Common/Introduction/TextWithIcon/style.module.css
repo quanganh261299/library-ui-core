@@ -1,0 +1,33 @@
+:root {
+    --font-color: #737e95;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.text-header {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.text-detail {
+    font-size: 13px;
+    color: var(--font-color);
+}
+
+.text-detail--special {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f33f62;
+}

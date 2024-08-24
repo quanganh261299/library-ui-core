@@ -1,11 +1,12 @@
 import Common from "../app/pages/Common/Common";
-import BasicLayout from "../app/layout/BasicLayout/BasicLayout";
+import BasicLayoutNavNotInHedear from "../app/layout/BasicLayout/NavaBarNotInHeader/NavBarNotInHeader";
 
 export const route = [
   {
     path: "/",
     // Layout
-    element: <BasicLayout />,
+    element: <BasicLayoutNavNotInHedear />,
+    // Page inside layout
     children: [
       {
         path: "/",
