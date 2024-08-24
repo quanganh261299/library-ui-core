@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Button } from './app/components/Common/Button/Button';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { route } from './routes/route';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+const router = createBrowserRouter(route);
 root.render(
   <React.StrictMode>
-    <Button>Test</Button>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
