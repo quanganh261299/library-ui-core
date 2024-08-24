@@ -6,6 +6,7 @@ import TextWithIcon from '../../../../components/Common/Introduction/TextWithIco
 import clockIcon from '../../../../../assets/images/clock.webp';
 import heartIcon from '../../../../../assets/images/heart.webp';
 import calculateIcon from '../../../../../assets/images/calculate.webp';
+import { Link } from 'react-router-dom';
 
 interface informationHeaderType {
   imgSrc?: string;
@@ -47,7 +48,9 @@ const BasicHeader = () => {
       </div>
       <div className={styles["container"]}>
         <div className={styles["information"]}>
-          <img src={logo} alt="logo" className='information__logo' />
+          <Link to="/">
+            <img src={logo} alt="logo" className='information__logo' />
+          </Link>
           <div className={styles["information__detail"]}>
             {informationHeader.map((item, index) => (
               <TextWithIcon
