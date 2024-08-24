@@ -1,12 +1,11 @@
-import { Children } from "react";
-import Config from "../app/pages/Config/Config";
 import Common from "../app/pages/Common/Common";
+import BasicLayout from "../app/layout/BasicLayout/BasicLayout";
 
 export const route = [
   {
     path: "/",
     // Layout
-    element: <Config />,
+    element: <BasicLayout />,
     children: [
       {
         path: "/",
