@@ -1,6 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './style.module.css'
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faSearch } from '@fortawesome/free-solid-svg-icons';
 
@@ -25,11 +25,14 @@ const NavBarTwoLevels: FC<Props> = (props: Props) => {
   const { search } = props
   const navigate = useNavigate();
   const [active, setActive] = useState<string>('home');
+  const location = useLocation();
   const goToPage = (event: any, activePage: string, link: string) => {
     event.stopPropagation();
     setActive(activePage)
     navigate(link)
   }
+
+  // config menu
   const menuItems: menuType[] = [
     {
       content: "Trang chủ",
@@ -101,6 +104,19 @@ const NavBarTwoLevels: FC<Props> = (props: Props) => {
       linkPage: '/contact',
     },
   ]
+
+  // set active link
+  useEffect(() => {
+    switch (true) {
+      case location.pathname === '/': return setActive('home')
+      case location.pathname.includes('/introduction'): return setActive('introduction')
+      case location.pathname.includes('/treatment-categories'): return setActive('treatment-categories')
+      case location.pathname.includes('/services'): return setActive('services')
+      case location.pathname.includes('/price'): return setActive('price')
+      case location.pathname.includes('/news'): return setActive('news')
+    }
+  }, [location])
+
   return (
     <>
       <div className={styles["nav-container"]}>
